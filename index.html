@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./images/quiz.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div id="setting">
+            <div class="gear-box">
+                <ul>
+                    <li id="search">Search</li>
+                    <li id="categories">Categories</li>
+                    <li id="areas"> Area</li>
+                    <li id="ingredients">Ingredients</li>
+                    <li id="contact">Contact Us </li>
+                </ul>
+                <div class="icon-nav">
+                    <i class="fa-brands fa-facebook fa-lg open1"></i>
+                    <i class="fa-brands fa-twitter fa-lg open1"></i>
+                    <i class="fa-solid fa-globe fa-lg open1"></i>
+                    <p>Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="icon">
+                <img class="logo" src="./img/logo.png" alt="" srcset="">
+                <div class="icon-group">
+                    <i class="fa-solid fa-bars fa-2xl open"></i>
+                    <i class="fa-solid fa-xmark fa-2xl close "></i>
+                </div>
+                <div class="icon-foot">
+                    <i class="fa-solid fa-globe fa-lg open1"></i>
+                    <i class="fa-solid fa-share-nodes fa-lg open2"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- start home sction -->
+    <div class="container mt-5">
+        <div class="row g-4" id="mydata">
+
+        </div>
+    </div>
+<!-- end home sction -->
+
+
+<!-- start search section -->
+<div class="ser d-none" id="mysearch">
+    <div class="container">
+    <div class="row" >
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="SearchByName" class="form-label"></label>
+                <input type="email" class="form-control" id="SearchByName" placeholder="Search By Name"/>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"></label>
+                <input type="email" maxlength="1" class="form-control" id="SearchByFirstLetter" placeholder="Search By First Letter"/>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row g-4" id="myser">
+            
+        </div>
+    </div>
+</div>
+</div>
+    
+<!-- end search section -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark "></i></button>
+              </div>
+         <div class="container">
+            <div class="row special-marign">
+                <div class="col-md-4">
+                    <img src="" id="img-detailes" alt="" class="w-100 rounded-2">   
+                    <h2 id="title"></h2> 
+                </div>
+                <div class="col-md-8">
+                    <h2>Instructions</h2>
+                    <p id="strInstructions"></p>
+                    <h3 ><span>Area :</span> <span id="area"></span></h3>
+                    <h3 ><span>Category :</span> <span id="Category"></span></h3>
+                    <h3>Recipes :</h3>
+                    <ul id="ingredient" class="list-unstyled d-flex g-3 flex-wrap">  
+                </ul>
+                <h3>Tags :</h3>
+                <ul id="atgs" class="list-unstyled d-flex g-3 flex-wrap">
+                       
+                </ul>
+                <a target="_blank" href="" class="btn btn-success" id="Source">Source</a>
+                <a target="_blank" href="" class="btn btn-danger" id="Youtube">Youtube</a>
+                </div>
+            </div>
+         </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    
+    <!-- start contact us section -->
+    <div class="sec d-none" id="mycontact">
+        <div class="container w-75"  >
+        <div class="home-contact"  >
+            <div class="row justify-content-center ">
+                <div class="col-md-6">
+                    <label for="EnterYourName" class="form-label"></label>
+                    <input type="name" class="form-control" id="nameInput" placeholder="Enter Your Name" />
+                    <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none text-center ">
+                        <span>Special characters and numbers not allowed </span>
+                        <span>hint first let is capita</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="EnterYourEmail" class="form-label"></label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Enter Your Email" />
+                    <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                        Email not valid *exemple@yyy.zzz
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <label for="EnterYourPhone" class="form-label"></label>
+                    <input type="name" class="form-control" id="phoneInput" placeholder="Enter Your Phone" />
+                    <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                        Enter valid Phone Number
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="EnterYourAge" class="form-label"></label>
+                    <input type="number" class="form-control" id="ageInput" placeholder="Enter Your Age" />
+                    <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                        Enter valid age
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <label for="EnterYourPassword" class="form-label"></label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Enter Your Password" />
+                    <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                        Enter valid password Minimum eight characters, at least one letter and one number:
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="Repassword" class="form-label"></label>
+                    <input type="password" class="form-control" id="repasswordInput" placeholder="Repassword" />
+                    <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none text-center">
+                        Enter valid repassword
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger bg-black mt-4">Submit</button>
+        </div>
+    </div>
+    </div>
+    
+    <!-- end contact u section -->
+
+
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+    <div class="container py-2">
+        <div class="row special-marign gy-3 gx-4" id="RowData">
+
+            
+
+       
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
